@@ -1,0 +1,26 @@
+.audience {
+  color: #fff;
+
+  @include breakpoint(medium down) {
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+
+    &__item {
+      width: calc(50% - 10px);
+    }
+  }
+
+  @include breakpoint(small only) {
+    &__list {
+      margin-bottom: rem-calc(23);
+    }
+
+    &__item {
+      width: 100%;
+    }
+  }
+}

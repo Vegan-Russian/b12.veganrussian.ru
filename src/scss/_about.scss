@@ -1,0 +1,90 @@
+.about {
+  position: relative;
+  display: flex;
+  padding-left: rem-calc(75);
+  color: #fff;
+  padding-right: clamp(40px, 7vw, 133px);
+  margin-bottom: rem-calc(31);
+
+  &__placeholder {
+    @include abs-stretch;
+
+    background-image: linear-gradient(161.39deg, #51e6ff 10.54%, #6603b5 90.27%);
+    // backdrop-filter: blur(0.334rem);
+    filter: blur(0.222rem);
+    border-radius: rem-calc(84);
+    z-index: -1;
+    box-shadow: rem-calc(0 4 10) rgba(0, 0, 0, 0.31);
+  }
+
+  &__img {
+    position: relative;
+    width: rem-calc(375);
+    flex-shrink: 0;
+    margin-right: rem-calc(21);
+  }
+
+  &__flower {
+    position: absolute;
+    left: rem-calc(-15);
+    top: rem-calc(10);
+  }
+
+  &__content {
+    padding-top: rem-calc(35);
+    padding-bottom: rem-calc(35);
+  }
+
+  &__marina {
+    border-radius: 50%;
+    position: relative;
+    top: rem-calc(-36);
+    box-shadow: rem-calc(0 1 12 2) rgba(255, 255, 255, 0.61);
+  }
+
+  @include breakpoint(large down) {
+    padding: 0;
+
+    &__img {
+      width: auto;
+      position: static;
+      margin: 0;
+    }
+
+    &__marina {
+      position: absolute;
+      z-index: 5;
+      right: rem-calc(15);
+      top: rem-calc(-85);
+      width: rem-calc(143);
+    }
+
+    &__crown {
+      position: absolute;
+      z-index: 2;
+      right: rem-calc(-30);
+      top: rem-calc(-120);
+    }
+
+    &__placeholder {
+      z-index: 3;
+    }
+
+    &__content {
+      padding: rem-calc(55 45 25);
+      position: relative;
+      z-index: 10;
+    }
+  }
+
+  @include breakpoint(medium down) {
+    &__placeholder {
+      filter: blur(0.05556rem);
+      border-radius: rem-calc(58);
+    }
+
+    &__content {
+      padding: rem-calc(55 30 25);
+    }
+  }
+}

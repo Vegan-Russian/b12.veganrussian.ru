@@ -1,0 +1,22 @@
+.promo {
+  display: flex;
+  align-items: center;
+
+  &__logo {
+    margin-right: rem-calc(38);
+  }
+
+  @include breakpoint(large down) {
+    margin-bottom: rem-calc(22);
+
+    &__logo {
+      width: rem-calc(132);
+    }
+  }
+
+  @include breakpoint(medium down) {
+    &__logo {
+      width: rem-calc(100);
+    }
+  }
+}
