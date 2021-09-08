@@ -1,54 +1,61 @@
 .total {
-  color: #fff;
-  text-align: center;
-
-  &__number-wrap {
-    background-image: url('../images/decor.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding-bottom: rem-calc(70);
-  }
-
-  &__number {
-    display: inline-block;
-  }
-
-  &__count {
-    @include gradien-text;
-
-    font-weight: 900;
-    line-height: 0.8;
-    text-shadow: rem-calc(4 1 18) rgba(255, 255, 255, 0.16);
-    font-size: rem-calc(278);
-    background-image: linear-gradient(164deg, $turquoise 0, $turquoise 41%, $lilac 63%, $lilac 100%)      ;
-  }
-
-  &__sub {
-    text-align: right;
-    font-size: rem-calc(32);
-    font-weight: bold;
     color: #fff;
-  }
+    text-align: center;
 
-  @include breakpoint(medium down) {
     &__number-wrap {
-      background-size: contain;
-      background-position: center;
-      padding-bottom: rem-calc(34);
+        background-image: url("../images/decor.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-bottom: rem-calc(70);
+    }
+
+    &__number {
+        display: inline-block;
     }
 
     &__count {
-      font-size: rem-calc(225);
+        @include gradien-text;
+
+        font-weight: 900;
+        line-height: 0.8;
+        text-shadow: rem-calc(4 1 18) rgba(255, 255, 255, 0.16);
+        font-size: rem-calc(240);
+        background-image: linear-gradient(
+            164deg,
+            $turquoise 0,
+            $turquoise 41%,
+            $lilac 63%,
+            $lilac 100%
+        );
     }
 
     &__sub {
-      font-size: rem-calc(25);
+        text-align: right;
+        font-size: rem-calc(32);
+        font-weight: bold;
+        color: #fff;
     }
-  }
 
-  @include breakpoint(small only) {
-    &__number-wrap {
-      margin: rem-calc(0 -35);
+    @include breakpoint(medium down) {
+        &__number-wrap {
+            background-size: contain;
+            background-position: center;
+            padding-bottom: rem-calc(34);
+        }
+
+        &__count {
+            font-size: rem-calc(190);
+            letter-spacing: rem-calc(-2);
+        }
+
+        &__sub {
+            font-size: rem-calc(25);
+        }
     }
-  }
+
+    @include breakpoint(small only) {
+        &__number-wrap {
+            margin: rem-calc(0 -35);
+        }
+    }
 }
