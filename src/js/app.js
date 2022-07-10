@@ -1,64 +1,43 @@
-// import "@fancyapps/fancybox";
-
+import "swiper/css";
 import "../scss/style.scss";
-(function ($) {
-  "use strict";
-  $(function () {
-    $(".header__menu-opener").on("click", function () {
-      const $self = $(this).find(".burger");
-      const $menu = $(".header__list");
+import Swiper, { Navigation } from "swiper";
 
-      $self.toggleClass("js-active");
-      $menu.toggleClass("js-active");
-      $("body").toggleClass("scroll-block");
-      $(".overlay").toggleClass("js-active");
+window.onload = () => {
+  const $burger = document.querySelector(".burger-menu__button");
+  const $menu = document.querySelector(".menu");
+
+  document.body.classList.remove("transition-lock");
+
+  if ($burger && $menu) {
+    $burger.addEventListener("click", function () {
+      $burger.classList.toggle("active");
+      $menu.classList.toggle("active");
     });
 
-    $(".overlay").on("click", function () {
-      $(".js-active").removeClass("js-active");
-      $("body").removeClass("scroll-block");
-      $(this).removeClass("js-active");
+    $menu.addEventListener("click", () => {
+      $burger.classList.remove("active");
+      $menu.classList.remove("active");
     });
+  }
 
-    $(".header__link").on("click", function () {
-      if (window.matchMedia("(max-width: 1240px)")) {
-        $(".js-active").removeClass("js-active");
-        $("body").removeClass("scroll-block");
-        $(this).removeClass("js-active");
-      }
-    });
-
-    $(".js-copy").on("click", function () {
-      navigator.clipboard.writeText($(this).attr("data-copy"));
-
-      const $tip = $(this).find(".js-tip");
-      const currentText = $tip.text();
-      $tip.text("Скопировано!");
-      setTimeout(function () {
-        $tip.removeClass("js-active");
-        $tip.text(currentText);
-      }, 1000);
-    });
-
-    $(".js-copy").on("mouseenter", function () {
-      const $tip = $(this).find(".js-tip");
-      $tip.addClass("js-active");
-    });
-
-    $(".js-copy").on("mouseleave", function () {
-      const $tip = $(this).find(".js-tip");
-      console.log("mouseleave");
-      $tip.removeClass("js-active");
-    });
-
-    // const forEq = [
-    //   {parent: ".how", child: ".js-eq-1"},
-    // ]
-
-    // $(window).on("resize", function() {
-    //   forEq.forEach(item => {
-    //     changeHeight(item.parent, item.child)
-    //   })
-    // })
+  new Swiper(".swiper", {
+    modules: [Navigation],
+    slidesPerView: 1,
+    spaceBetween: 18,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      960: {
+        slidesPerView: 1,
+      },
+      1239: {
+        slidesPerView: "auto",
+      },
+      1240: {
+        slidesPerView: 2,
+      },
+    },
   });
-})(jQuery);
+};

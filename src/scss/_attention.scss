@@ -1,0 +1,31 @@
+.attention {
+    margin-bottom: 100px;
+    display: grid;
+    grid-template-columns: 7fr 3fr;
+    grid-gap: 20px;
+    color: #fff;
+    align-items: center;
+    font-weight: 800;
+    font-size: 27px;
+    line-height: 1.37;
+
+
+    @include media('md') {
+        grid-template-columns: 1fr;
+        grid-gap: 35px;
+        justify-content: center;
+        margin-bottom: 40px;
+
+        img {
+            justify-self: center;
+        }
+    }
+    @include media('xs') {
+        font-size: 18px;
+        line-height: 1.44;
+
+        img {
+            max-width: 200px;
+        }
+    }
+}

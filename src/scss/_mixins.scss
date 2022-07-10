@@ -1,21 +1,23 @@
-@mixin gradien-text() {
-  // background-clip: text;
-  // text-fill-color: transparent;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+$sizes: (
+  'lg': 1240px,
+  'md': 960px,
+  'sm': 767px,
+  'xs': 599px,
+);
+
+@mixin media($size, $range: 'max') {
+  @if map-has-key($sizes, $size){
+    $size-value: map-get($sizes, $size);
+    @media only screen and (#{$range}-width: $size-value) {
+      @content;
+    }
+  } @else {
+    @warn 'Invalid breakpoint: #{$size}.';
+  }
 }
 
-@mixin position-center() {
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
-}
-
-@mixin abs-stretch() {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
+@mixin two-parts-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
 }

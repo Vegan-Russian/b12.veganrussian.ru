@@ -1,5 +1,4 @@
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const webpack = require("webpack");
 const CopyPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
@@ -14,7 +13,7 @@ function resolveSrc(_path) {
   return path.join(__dirname, _path);
 }
 
-module.exports = function (env, argv) {
+module.exports = function (_, argv) {
   if (argv.mode === "production") {
     targetBrowser = "browserslist";
     pluginImgMinify = new ImageminPlugin({
@@ -154,16 +153,10 @@ module.exports = function (env, argv) {
       new MiniCssExtractPlugin({
         filename: "./css/style.css",
       }),
-      new webpack.ProvidePlugin({
-        $: "jquery",
-        jQuery: "jquery",
-      }),
 
       new CopyPlugin({
         patterns: [
-          { from: "src/i", to: "./i" },
           { from: "src/images", to: "./images" },
-          { from: "src/json", to: "./json" },
           { from: "src/fonts", to: "./fonts" },
         ],
       }),

@@ -1,22 +1,52 @@
 .promo {
-  display: flex;
-  align-items: center;
+    @include two-parts-grid;
+    color: #fff;
+    margin-bottom: 45px;
 
-  &__logo {
-    margin-right: rem-calc(38);
-  }
-
-  @include breakpoint(large down) {
-    margin-bottom: rem-calc(22);
-
-    &__logo {
-      width: rem-calc(132);
+    &__image {
+        max-width: 480px;
     }
-  }
 
-  @include breakpoint(medium down) {
-    &__logo {
-      width: rem-calc(100);
+    &__subtitle {
+        font-size: 30px;
+        line-height: 1.33;
+        margin-bottom: 41px;
+        font-weight: 700;
     }
-  }
+
+    &__description {
+        margin-bottom: 39px;
+    }
+
+    @include media('md') {
+        grid-template-columns: 1fr 1fr;
+
+
+        &__image {
+            justify-self: center;
+            width: 100%;
+        }
+
+
+        &__title {
+            order: -2;
+        }
+        &__subtitle {
+            order: -1;
+            font-size: 20px;
+            margin-bottom: 27px;
+        }
+        &__description {
+            font-size: 16px;
+            line-height: 1.3125;
+        }
+    }
+
+    @include media('sm') {
+        grid-template-columns: 1fr;
+        grid-gap: 0;
+        &__content {
+            display: contents;
+        }
+    }
 }

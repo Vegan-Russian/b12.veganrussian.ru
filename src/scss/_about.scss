@@ -1,90 +1,151 @@
 .about {
-  position: relative;
-  display: flex;
-  padding-left: rem-calc(75);
-  color: #fff;
-  padding-right: clamp(40px, 7vw, 133px);
-  margin-bottom: rem-calc(31);
+    @include two-parts-grid;
+    color: var(--accent-text-color);
+    margin-bottom: 100px;
 
-  &__placeholder {
-    @include abs-stretch;
-
-    background-image: linear-gradient(161.39deg, #51e6ff 10.54%, #6603b5 90.27%);
-    // backdrop-filter: blur(0.334rem);
-    filter: blur(0.222rem);
-    border-radius: rem-calc(84);
-    z-index: -1;
-    box-shadow: rem-calc(0 4 10) rgba(0, 0, 0, 0.31);
-  }
-
-  &__img {
-    position: relative;
-    width: rem-calc(375);
-    flex-shrink: 0;
-    margin-right: rem-calc(21);
-  }
-
-  &__flower {
-    position: absolute;
-    left: rem-calc(-15);
-    top: rem-calc(10);
-  }
-
-  &__content {
-    padding-top: rem-calc(35);
-    padding-bottom: rem-calc(35);
-  }
-
-  &__marina {
-    border-radius: 50%;
-    position: relative;
-    top: rem-calc(-36);
-    box-shadow: rem-calc(0 1 12 2) rgba(255, 255, 255, 0.61);
-  }
-
-  @include breakpoint(large down) {
-    padding: 0;
-
-    &__img {
-      width: auto;
-      position: static;
-      margin: 0;
+    h2 {
+        margin-bottom: 42px;
     }
 
-    &__marina {
-      position: absolute;
-      z-index: 5;
-      right: rem-calc(15);
-      top: rem-calc(-85);
-      width: rem-calc(143);
+    &__points {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-gap: 22px 32px;
     }
 
-    &__crown {
-      position: absolute;
-      z-index: 2;
-      right: rem-calc(-30);
-      top: rem-calc(-120);
+    &__count-wrapper {
+        position: relative;
+        width: max-content;
+        margin-bottom: 70px;
     }
 
-    &__placeholder {
-      z-index: 3;
+    &__count {
+        background: linear-gradient(165.95deg, #34AAFF 38.97%, #CF10FF 102.9%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        text-shadow: 4px 1px 18px rgba(255, 255, 255, 0.16);
+        font-weight: 900;
+        font-family: Roboto, sans-serif;
+        font-size: 236px;
+        line-height: 90.7%;
     }
 
-    &__content {
-      padding: rem-calc(55 45 25);
-      position: relative;
-      z-index: 10;
-    }
-  }
-
-  @include breakpoint(medium down) {
-    &__placeholder {
-      filter: blur(0.05556rem);
-      border-radius: rem-calc(58);
+    &__ball {
+        position: absolute;
+        top: -20px;
+        left: -12px;
+        transform: translateX(-100%);
     }
 
-    &__content {
-      padding: rem-calc(55 30 25);
+    &__second-ball {
+        position: absolute;
+        top: 100%;
+        right: -10px;
+        transform: translate(100%, -20px);
     }
-  }
+
+    &__wave-line {
+        position: absolute;
+        top: -56px;
+        right: 0;
+        transform: translateX(100%);
+    }
+
+    &__month-count {
+        border: 2px solid var(--accent-text-color);
+        border-radius: 29px;
+        font-size: 26px;
+        line-height: 132.7%;
+        padding: 7px 10px;
+        max-width: 416px;
+        text-align: center;
+        width: 100%;
+    }
+
+    @include media('lg') {
+        overflow-x: hidden;
+        &__wave-line {
+            top: -56px;
+            right: -100px;
+            transform: rotate(-22deg);
+            transform-origin: 50% 50%;
+        }
+    }
+
+    @include media('md') {
+        grid-template-columns: 1fr;
+        grid-gap: 51px;
+
+        h2 {
+            margin-bottom: 30px;
+        }
+
+        &__count-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    @include media('xs') {
+        font-size: 14px;
+        margin-left: -20px;
+        margin-right: -20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-bottom: 66px;
+
+        &__count-info {
+            h2 {
+                align-self: flex-start;
+            }
+        }
+
+        &__count-wrapper {
+            margin-bottom: 40px;
+        }
+
+        &__count {
+            font-size: 151px;
+        }
+
+        &__ball,
+        &__second-ball  {
+            width: 22px;
+        }
+
+        &__ball {
+            left: 4px;
+        }
+
+
+        &__second-ball {
+            top: 110%;
+            right: 100px;
+        }
+
+        &__month-count {
+            max-width: none;
+            font-size: 20px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &__wave-line {
+            top: -38px;
+            right: -65px;
+            width: 86px;
+            transform: rotate(-40deg);
+        }
+
+        &__points {
+            grid-gap: 20px 40px ;
+            img {
+                height: 30px;
+            }
+        }
+    }
 }

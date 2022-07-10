@@ -1,13 +1,10 @@
 {
-  "name": "cetera-wireframe-boilerplate",
-  "version": "4.0.0",
+  "name": "b12",
+  "version": "1.0.0",
   "main": "./src/js/app.js",
-  "description": "Шаблон прототипов на фреймворке Foundation в компании Cetera Labs",
+  "description": "",
   "dependencies": {
-    "foundation-sites": "^6.6.3",
-    "jquery": "^3.6.0",
-    "motion-ui": "^2.0.3",
-    "slick-carousel": "^1.8.1",
+    "swiper": "^8.3.0",
     "webpack-cli": "^4.6.0",
     "webpack-dev-server": "^3.11.2"
   },
@@ -47,21 +44,6 @@
     "minify": "webpack --mode production --config webpack.config.js",
     "lint-prod": "eslint ./src/**/*.js --fix && stylelint ./src/**/*.scss --fix"
   },
-  "standard": {
-    "globals": [
-      "jQuery",
-      "Foundation"
-    ]
-  },
-  "repository": {
-    "type": "git",
-    "url": "ssh://git@gitlab.cetera.ru:6022/boilerplate/wireframe"
-  },
-  "keywords": [
-    "cetera",
-    "webpack",
-    "frontend"
-  ],
-  "author": "Denis Sakharov <d.sakharov@ceteralabs.com> (http://cetera.ru/)",
+  "author": "",
   "license": "UNLICENSED"
 }

@@ -1,21 +1,11 @@
-
-
 header.header
-  .grid-container
-    .grid-x
-      .cell.shrink
-        .header__logo
-          img(src="./i/logo.png", alt="Б-12 логотип")
-      .cell.auto
-        .header__btn-wrap.hide-for-xlarge
-          button.header__menu-opener
-            +burger
-        nav.header__nav
-          ul.header__list
-            li: a(href="#to-whom").header__link Кому мы помогаем
-            li: a(href="#how-many").header__link Скольким мы помогли
-            li: a(href="#how").header__link Как мы это делаем
-            li: a(href="#help").header__link Как получить помощь
-            li: a(href="#participate").header__link Как помочь проекту
+  a(href="/").header__link
+    img(src="./images/logo.svg" width="68")
+  .burger-menu
+    button(type="button").burger-menu__button
+      .burger-menu__line
+      .burger-menu__line
+      .burger-menu__line
+    include _menu
 
 

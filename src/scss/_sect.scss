@@ -1,7 +1,0 @@
-.sect {
-  margin-bottom: rem-calc(56);
-
-  @include breakpoint(medium down) {
-    margin-bottom: rem-calc(32);
-  }
-}

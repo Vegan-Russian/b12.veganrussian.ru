@@ -1,0 +1,123 @@
+-
+  var diary = [
+    {title: 'Растительное молоко Oddly Good', vit: '0,40'},
+    {title: 'Растительное молоко Joya (разные вкусы, см. упаковку)', vit: '0,38'},
+    {title: 'Растительное молоко Rioba (разные вкусы)', vit: '0,38'},
+    {title: 'Растительное молоко Orasi (разные вкусы, см. упаковку)', vit: '0,38'},
+    {title: 'Растительное молоко Zinus (разные вкусы, см. упаковку)', vit: ' 0,38'},
+    {title: 'Растительное молоко Русская союшка (разные вкусы, см. упаковку)', vit: '0,38'},
+    {title: 'Растительное  молоко Hi (разные вкусы, см. упаковку)', vit: '0,15'},
+    {title: 'Растительное молоко Valsoia (разные вкусы, см. упаковку)', vit: '0,38'},
+    {title: 'Растительное молоко Shoyce (разные вкусы, см. упаковку)', vit: '0,38'},
+    {title: 'Растительное молоко Alpro (не рос. производство, не органик)', vit: '0,38'},
+    {title: 'Молоко для кофе Соя Green Milk', vit: '0,38'},
+    {title: 'Растительное молоко Майями-Вега (разные вкусы, см. упаковку)', vit: '0,38'},
+    {title: 'Растительное молоко AdeZ', vit: '0,25 '},
+    {title: 'Растительное бариста молоко Green Idea', vit: '0,076'},
+    {title: 'Растительное молоко Bite (разные вкусы, см. упаковку)', vit: '0,07'},
+    {title: 'Растительное молоко Naala', vit: '0,15'},
+    {title: 'Растительное молоко Здоровое меню (разные вкусы, см. упаковку)', vit: '0,38'},
+    {title: 'Овсяный йогурт nemoloko (разные вкусы, см. упаковку)', vit: '0,47'},
+    {title: 'Пудинг Green Idea', vit: '0,15'},
+    {title: 'Сметана соевая 20% nemoloko', vit: '0,47'},
+    {title: 'Крем-чиз De Olio', vit: '0,15'},
+    {title: 'Сыр со вкусом чеддер Nature&Moi', vit: '1,5'},
+    {title: 'Пармелайз Vegalize', vit: '0,5'},
+  ]
+
+  var semiproduct = [
+    {title: 'Фрикадельки HiBalls Еда будущего', vit: '0,15'},
+    {title: 'Пельмени с растительным фаршем HiPelly Еда будущего', vit: '0,15'},
+    {title: 'Котлеты для бургера HiBurger', vit: '0,15'},
+    {title: 'Наггетсы Higgets Еда будущего', vit: '0,15'},
+  ]
+  var madeFood = [
+    {title: 'Сухая смесь Ризотто с грибами Easy Base', vit: '???'},
+    {title: 'Бульон Веганский Easy Base', vit: '???'},
+    {title: 'Сухой завтрак Радужные колечки ОГО!', vit: '1,25'},
+    {title: 'Макароны по-флотски с растительным мясом ВкусВилл', vit: '0,072'},
+    {title: 'Бургер с растительным мясом ВкусВилл', vit: '0,15'},
+  ]
+  var energyDrink = [
+    {title: 'Энергетики Gorilla', vit: '0,86'},
+    {title: 'Энергетикb Adrenaline rush', vit: '0.4'},
+    {title: 'Энергетик Bang', vit: '0,31'},
+    {title: 'Энергетик Monster Energy', vit: '1,3'},
+    {title: 'Энергетик Drive Me', vit: '0,16'},
+    {title: 'Энергетик Нефть (разные вкусы, см. упаковку)', vit: '0,16'},
+    {title: 'Энергетик Red Bull (разные вкусы, см. упаковку)', vit: '1,9'},
+    {title: 'Энергетик E-ON (разные вкусы, см. упаковку)', vit: '0,2'},
+    {title: 'Энергетик  S.O.V.A. (разные вкусы, см. упаковку)', vit: '0,16'},
+  ]
+  var different = [
+    {title: 'Дрожжи неактивные с B12 Nooch', vit: '44'},
+    {title: 'Пищевые дрожжи Now Foods', vit: '14'},
+    {title: 'Колбаса Экстравюрст Самокат', vit: '0,7'},
+    {title: 'Протеиновый батончик капучино Tekmar', vit: '0,75'},
+    {title: 'Зубная паста Изобилие Голодный Леший', vit: '19', footnote: '*в 1 г пасте (рекомендумое количество для 1 использования). Важно понимать, что он впитывается не на 100%. Производители советуют использовать пасту с В12 утром. А вечером другую для лучшего очищения.'},
+  ]
+
+doctype html
+html.no-js(lang='ru')
+  include components/service/_head
+  body.body.transition-lock
+    .prod-boilerplate
+      .wrapper
+        header.header
+          a(href="/").header__link
+            img(src="./images/logo.svg" width="68")
+          .burger-menu
+            button(type="button").burger-menu__button
+              .burger-menu__line
+              .burger-menu__line
+              .burger-menu__line
+            aside.menu
+              a(href="/#about").menu__item.menu__item--triangled Условия участия
+              a(href="/#howto").menu__item Как подать заявку
+              a(href="/").menu__item На главную
+              a(href="/#details").menu__item Финансирование
+              a(href="/#reviews").menu__item Отзывы
+
+        .products
+          h1.products__title Продукты обагащенные В12
+          .products__table
+            .products__head.products__head--first Молочка
+            .products__section
+              each val in diary
+                .products__item= val.title
+                  strong / #{val.vit}  мкг
+            .products__head Полуфабрикаты
+            .products__section
+              each val in semiproduct
+                .products__item= val.title
+                  strong / #{val.vit}  мкг
+            .products__head Готовая еда
+            .products__section
+              each val in madeFood
+                .products__item= val.title
+                  strong / #{val.vit}  мкг
+            .products__head Энергетики
+            .products__section
+              each val in energyDrink
+                .products__item= val.title
+                  strong / #{val.vit}  мкг
+            .products__head Разное
+            .products__section
+              each val in different
+                if (!('footnote' in val))
+                  .products__item= val.title
+                    strong / #{val.vit}  мкг
+                else
+                  .products__item= val.title
+                    strong / #{val.vit}  мкг*
+                    .products__footnote= val.footnote
+
+
+
+        include components/common/_footer
+
+
+
+
+
+

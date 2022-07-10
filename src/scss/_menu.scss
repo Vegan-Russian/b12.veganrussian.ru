@@ -1,0 +1,64 @@
+.menu {
+    $radius: 15px;
+    position: absolute;
+    width: 316px;
+    background: linear-gradient(161.06deg, #79CFFF 21.3%, #79CFFF 48.07%, #FFFFFF 105.13%);
+    color: var(--accent-text-color);
+    top: calc(100% + 20px);
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    right: 0;
+    z-index: 100;
+
+    transition: opacity .3s ease, transform .3s ease;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(40px);
+
+    &.active {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+
+    &__item {
+        padding: 21px 40px 21px 50px;
+        text-align: left;
+        transition: background-color .3s ease, color .3s ease;
+        &:hover {
+            background-color: var(--accent-color);
+            color: #fff;
+        }
+
+        &--triangled {
+            position: relative;
+
+            &::after {
+                content: '';
+                display: block;
+                width: 26px;
+                height: 17px;
+                clip-path: polygon(0 100%, 100% 100%, 50% 0);
+                position: absolute;
+                top: 1px;
+                transform: translateY(-100%);
+                background-color: #79CFFF;
+                right: 46px;
+                transition: background-color .3s ease;
+            }
+
+            &:hover::after {
+                background-color: var(--accent-color);
+            }
+        }
+
+        &:first-child {
+            border-radius: $radius $radius 0 0;
+        }
+
+        &:last-child {
+            border-radius: 0 0 $radius $radius;
+        }
+    }
+}

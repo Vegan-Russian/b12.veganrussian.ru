@@ -1,0 +1,106 @@
+.reviews {
+    margin-bottom: 100px;
+
+    &__title {
+        color: #fff;
+        margin-bottom: 31px;
+    }
+
+    &__slide {
+        background-color: #fff;
+        border-radius: 48px;
+        min-height: 532px;
+        padding: 47px 61px;
+        color: var(--accent-text-color);
+    }
+
+    &__name {
+        margin-bottom: 18px;
+        font-family: 'Mulish', sans-serif;
+        font-size: 25px;
+        font-weight: 800;
+    }
+    &__slider {
+        position: relative;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        transition: background-color .25s ease;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        padding: 18px;
+        &:hover {
+            background-color: rgba(#fff, 0.1);
+        }
+        &.swiper-button-disabled {
+            opacity: 0.7;
+            pointer-events: none;
+        }
+    }
+
+    .swiper-button-prev {
+        left: 0;
+        transform: translateX(-100%);
+    }
+    .swiper-button-next {
+        right: 0;
+        transform: translateX(100%);
+    }
+
+    @include media('lg') {
+        &__slider {
+            padding: 0 58px;
+        }
+        .swiper-button-prev,
+        .swiper-button-next {
+            transform: none;
+        }
+        .swiper-slide {
+            max-width: 532px;
+        }
+    }
+    @include media('md') {
+        margin-bottom: 53px;
+        .swiper-slide {
+            max-width: none;
+        }
+    }
+    @include media('sm') {
+        &__slide {
+            padding: 20px 18px;
+            border-radius: 25px;
+        }
+    }
+
+    @include media('xs') {
+        &__slider {
+            padding: 0 20px;
+        }
+
+        &__name {
+            margin-bottom: 15px;
+            font-size: 17px;
+        }
+
+        &__slide {
+            font-size: 14px;
+            min-height: 293px;
+        }
+
+        .swiper-button-prev,
+        .swiper-button-next {
+            padding: 0 6px;
+            img {
+                width: 11px;
+            }
+        }
+        .swiper-button-prev {
+            left: -5px;
+        }
+        .swiper-button-next {
+            right: -5px;
+        }
+    }
+}

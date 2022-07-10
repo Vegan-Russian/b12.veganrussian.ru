@@ -1,20 +1,18 @@
-include ../blocks/burger/_burger
-
-
 doctype html
 html.no-js(lang='ru')
   include components/service/_head
-  body.body
-    include components/common/_header
-    include components/common/_intro
-    include components/common/_audience
-    include components/common/_how
+  body.body.transition-lock
+    .main-boilerplate
+      .wrapper
+        include components/common/_header
+        include components/common/_promo
+        include components/common/_about
+        include components/common/_howto
+        include components/common/_details
+        include components/common/_attention
+        include components/common/_reviews
 
-    .grid-container
-      include components/common/_participate
-      include components/common/_about
-      include components/common/_footer
-    .overlay
+        include components/common/_footer
 
 
 

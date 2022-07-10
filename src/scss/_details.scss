@@ -1,0 +1,46 @@
+.details {
+    @include two-parts-grid;
+    margin-bottom: 140px;
+
+    &__part {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-right: 76px;
+
+        .button {
+            margin-top: auto;
+
+        }
+    }
+
+    &__title {
+        margin-bottom: 24px;
+    }
+
+    &__description {
+        margin-bottom: 50px;
+    }
+
+    @include media('md') {
+        grid-gap: 30px;
+        &__part {
+            padding-right: 0;
+        }
+    }
+
+    @include media('sm') {
+        grid-template-columns: 1fr;
+        grid-gap: 65px;
+        color: #fff;
+        margin-bottom: 65px;
+
+        &__description {
+            margin-bottom: 30px;
+        }
+    }
+    @include media('xs') {
+        font-size: 14px;
+
+    }
+}
