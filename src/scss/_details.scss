@@ -1,6 +1,7 @@
 .details {
     @include two-parts-grid;
     margin-bottom: 140px;
+    color: var(--accent-text-color);
 
     &__part {
         display: flex;
