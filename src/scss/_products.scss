@@ -1,6 +1,6 @@
 .products {
     --x-gap: 80px;
-    &__title {
+    &__description {
         margin-bottom: 51px;
     }
 
@@ -54,7 +54,6 @@
         line-height: 1.318;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
         strong {
             font-weight: 900;
             font-family: $mulish-font;

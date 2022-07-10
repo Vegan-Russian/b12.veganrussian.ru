@@ -28,19 +28,19 @@
   var semiproduct = [
     {title: 'Фрикадельки HiBalls Еда будущего', vit: '0,15'},
     {title: 'Пельмени с растительным фаршем HiPelly Еда будущего', vit: '0,15'},
-    {title: 'Котлеты для бургера HiBurger', vit: '0,15'},
+    {title: 'Котлеты для бургера HiBurger Еда будущего', vit: '0,15'},
     {title: 'Наггетсы Higgets Еда будущего', vit: '0,15'},
   ]
   var madeFood = [
-    {title: 'Сухая смесь Ризотто с грибами Easy Base', vit: '???'},
-    {title: 'Бульон Веганский Easy Base', vit: '???'},
     {title: 'Сухой завтрак Радужные колечки ОГО!', vit: '1,25'},
     {title: 'Макароны по-флотски с растительным мясом ВкусВилл', vit: '0,072'},
     {title: 'Бургер с растительным мясом ВкусВилл', vit: '0,15'},
+    {title: 'Сухая смесь Ризотто с грибами Easy Base', vit: '???'},
+    {title: 'Бульон Веганский Easy Base', vit: '???'},
   ]
   var energyDrink = [
     {title: 'Энергетики Gorilla', vit: '0,86'},
-    {title: 'Энергетикb Adrenaline rush', vit: '0.4'},
+    {title: 'Энергетик Adrenaline rush', vit: '0.4'},
     {title: 'Энергетик Bang', vit: '0,31'},
     {title: 'Энергетик Monster Energy', vit: '1,3'},
     {title: 'Энергетик Drive Me', vit: '0,16'},
@@ -79,7 +79,22 @@ html.no-js(lang='ru')
               a(href="/#reviews").menu__item Отзывы
 
         .products
-          h1.products__title Продукты обогащенные В12
+          h1 Продукты обогащенные В12
+          p.products__description По этой таблице можно ориентироваться на продукты, в которых есть витамин B12.
+            | Чтобы высчитать, сколько витамина вы получаете из таких продуктов, используйте сайты 
+            a.text-link(href="https://cronometer.com/" target="_blank" rel="noopener noreferrer nofollow") Cronometer
+            |  или 
+            a.text-link(href="https://veganplan.ru/dashboard" target="_blank" rel="noopener noreferrer nofollow") Vegan Plan
+            | . 
+            | Больше информации по В12: 
+            a.text-link(href="https://veganrussian.ru/b12-for-vegans-faq/" target="_blank") Веган FAQ по витамину B12
+            | . 
+            | Для обновлений таблицы писать на 
+            a.text-link(href="mailto:hello@veganrussian.ru") hello@veganrussian.ru
+            | .
+            br
+            br
+            | Помните, что получение В12 из обогащённой пищи менее надежно, чем из добавок. В любом случае, сдавайте анализы раз в год.
           .products__table
             .products__head.products__head--first Молочка
             .products__section
