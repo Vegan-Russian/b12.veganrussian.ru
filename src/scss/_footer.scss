@@ -135,11 +135,15 @@
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    gap: 19px;
     width: 210px;
+  }
+
+  .footer__column:nth-child(1) {
+    gap: 17px;
+  }
+
+  .footer__column:nth-child(2) {
+    gap: 47px;
   }
   
   .footer__copy {
