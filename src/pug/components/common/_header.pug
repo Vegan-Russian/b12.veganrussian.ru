@@ -1,11 +1,25 @@
-header.header
-  a(href="/").header__link
-    img(src="./images/logo.svg" width="68")
-  .burger-menu
-    button(type="button").burger-menu__button
-      .burger-menu__line
-      .burger-menu__line
-      .burger-menu__line
-    include _menu
-
-
+header#header.header
+  .container
+    .header__inner.header__main
+      a.header__logo(href='#header')
+        img(src='./images/Logo.svg', alt='logo')
+      img.header__menu(src='./images/burger.svg', alt='menu')
+    .header__mobile
+      span.menu__close X
+      nav.header__mobile-menu
+        ul.header__mobile-list
+          li.header__mobile-item
+            a.header__mobile-link.menu-link(href='#about')
+              | Условия участия
+          li.header__mobile-item
+            a.header__mobile-link.menu-link(href='#request')
+              | КАК ПОДАТЬ ЗАЯВКУ
+          li.header__mobile-item
+            a.header__mobile-link(href='products.html#b12')
+              | Продукты, обогащеные В12
+          li.header__mobile-item
+            a.header__mobile-link.menu-link(href='#details')
+              | Финансирование
+          li.header__mobile-item
+            a.header__mobile-link.menu-link(href='#reviews')
+              | ОТЗЫВЫ

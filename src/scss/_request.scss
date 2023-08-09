@@ -1,0 +1,341 @@
+.request__inner {
+    padding: 0;
+    position: relative;
+    margin-bottom: 100px;
+  }
+  
+  .request__title {
+    padding-bottom: 45px;
+    font-family: "Nunito";
+    font-style: italic;
+    font-weight: 800;
+    font-size: 39px;
+    line-height: 53px;
+    text-transform: uppercase;
+    color: #0d1288;
+  }
+  
+  @media (max-width: 1088px) {
+    .request__title {
+      text-align: center;
+    }
+  }
+  
+  @media (max-width: 788px) {
+    .request__title {
+      font-size: 28px;
+      line-height: 38px;
+    }
+  }
+  
+  .request__title::before {
+    position: absolute;
+    content: "";
+    background-image: url(../images/leaves.png);
+    width: 823px;
+    height: 278px;
+    top: -200px;
+    right: -190px;
+  }
+  
+  .request__info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    gap: 60px;
+  }
+  
+  @media (max-width: 1088px) {
+    .request__info {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      gap: 30px;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      padding: 0 150px;
+    }
+  }
+  
+  .request__column {
+    width: 53%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 55px;
+  }
+  
+  .request__column-last {
+    width: 47%;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: end;
+  }
+  
+  @media (max-width: 1088px) {
+    .request__column-last {
+      -webkit-box-align: start;
+      -ms-flex-align: start;
+      align-items: start;
+    }
+  }
+  
+  .request__column-first p:nth-child(2) {
+    position: relative;
+    padding-left: 60px;
+  }
+  
+  @media (max-width: 1130px) {
+    .request__column-first p:nth-child(2) {
+      padding-left: 0;
+    }
+  }
+  
+  .request__column-last p:nth-child(1) {
+    position: relative;
+    padding-left: 30px;
+  }
+  
+  @media (max-width: 1130px) {
+    .request__column-last p:nth-child(1) {
+      padding-left: 0;
+    }
+  }
+  
+  .request__column-first p:nth-child(2)::after,
+  .request__column-last p:nth-child(1)::after {
+    position: absolute;
+    content: "";
+    width: 85px;
+    height: 102px;
+    background-image: url(../images/request-leaf.png);
+  }
+  
+  .request__column-first p:nth-child(2)::before,
+  .request__column-last p:nth-child(1)::before {
+    display: none;
+  }
+  
+  .request__column-first p:nth-child(2)::after {
+    bottom: 80px;
+    left: -50px;
+  }
+  
+  .request__column-last p:nth-child(1)::after {
+    bottom: 20px;
+    left: -80px;
+  }
+  
+  @media (max-width: 1130px) {
+    .request__column-first p:nth-child(2)::after,
+    .request__column-last p:nth-child(1)::after {
+      display: none;
+    }
+  }
+  
+  .request__column-first p:nth-child(1) {
+    width: 450px;
+    font-family: "Nunito";
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 32px;
+  }
+  
+  .request__column-last p:nth-child(2) {
+    position: relative;
+    padding: 30px 15px 80px 30px;
+    background: #ded3fc;
+    border-radius: 27px;
+    font-family: "Nunito";
+  }
+  
+  .request__column-last p {
+    width: 440px;
+  }
+  
+  @media (max-width: 1088px) {
+    .request__column,
+    .request__column p,
+    .request__column-first p:nth-child(1) {
+      width: 95%;
+    }
+  }
+  
+  @media (max-width: 990px) {
+    .request__info {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      gap: 30px;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      padding: 0;
+      margin: 0 50px;
+    }
+  
+    .request__column-last p {
+      width: 100%;
+    }
+  }
+  
+  .request__btn {
+    position: absolute;
+    right: 50px;
+    bottom: 20px;
+    width: 264px;
+    height: 63px;
+    color: white;
+    font-family: "Nunito";
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    background: #4a2cff;
+    border: 1px solid #4a2cff;
+    -webkit-box-shadow: 0px 4px 19px 4px rgba(255, 255, 255, 0.36);
+    box-shadow: 0px 4px 19px 4px rgba(255, 255, 255, 0.36);
+    border-radius: 49px;
+  }
+  
+  @media (max-width: 1115px) {
+    .request__btn {
+      right: 0;
+    }
+  }
+  
+  @media (max-width: 1088px) {
+    .request__btn {
+      right: 30%;
+    }
+  }
+  
+  .request__column-last p:nth-child(2)::before {
+    position: absolute;
+    content: "";
+    background-image: url(../images/request-avatar.png);
+    width: 124px;
+    height: 124px;
+    left: -45px;
+    bottom: -55px;
+  }
+  
+  .request__column-last p:nth-child(2)::after {
+    display: none;
+  }
+  
+  @media (min-width: 535px) and (max-width: 750px) {
+    .request__column-last p:nth-child(2) {
+      padding-right: 91px;
+    }
+  }
+  
+  @media (max-width: 750px) {
+    .request {
+      margin-top: 50px;
+    }
+  
+    .request__title::before {
+      display: none;
+    }
+  
+    .request__title::after {
+      display: block;
+      position: absolute;
+      content: "";
+      background-image: url(../images/leafs-mobile.png);
+      background-repeat: no-repeat;
+      width: auto;
+      height: 190.05px;
+      top: -190px;
+      right: 0;
+      left: 0;
+    }
+  
+    .request__column-first p:nth-child(2)::before,
+    .request__column-last p:nth-child(1)::before {
+      display: block;
+      position: absolute;
+      content: "";
+      width: 150px;
+      height: 150px;
+      left: -15px;
+      background-image: url(../images/point-mobile.png);
+      background-repeat: no-repeat;
+    }
+  
+    .request__column-first p:nth-child(2)::before {
+      top: -40%;
+    }
+    .request__column-last p:nth-child(1)::before {
+      top: -80%;
+    }
+  
+    .request__column {
+      font-size: 18px;
+      line-height: 24px;
+      font-weight: 700;
+    }
+  
+    .request__btn {
+      right: 25%;
+    }
+  
+    .request__column-first p:nth-child(1) {
+      font-size: 23px;
+      line-height: 24px;
+    }
+  
+    .request__column-last p:nth-child(2)::before {
+      display: none;
+    }
+    .request__column-last p:nth-child(2)::after {
+      display: block;
+      position: absolute;
+      content: "";
+      background-image: url(../images/avatar-mobile.png);
+      width: 89px;
+      height: 89px;
+      right: 5%;
+      top: -40px;
+    }
+  }
+  
+  @media (max-width: 590px) {
+    .request__btn {
+      left: 0;
+      right: 0;
+      width: auto;
+      margin: 0 25%;
+      padding: 0 10px;
+    }
+  }
+  
+  @media (max-width: 426px) {
+    .request__info {
+      margin: 0;
+    }
+  
+    .request__btn {
+      margin: 0 15%;
+    }
+  
+    .request__column-last p:nth-child(2) {
+      padding-bottom: 60px;
+    }
+  
+    .request__column,
+    .request__column p,
+    .request__column-first p:nth-child(1) {
+      width: 99%;
+    }
+  }

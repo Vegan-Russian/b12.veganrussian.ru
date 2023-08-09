@@ -162,5 +162,8 @@ module.exports = function (_, argv) {
       }),
       pluginImgMinify,
     ],
+    stats: {
+      children: true,
+    }
   };
 };

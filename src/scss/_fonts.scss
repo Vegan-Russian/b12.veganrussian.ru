@@ -1,33 +1,146 @@
 @font-face {
-  font-family: 'Roboto';
-  src:
-    url($fontsPath + '/Roboto-Regular.woff2') format('woff2'),
-    url($fontsPath + '/Roboto-Regular.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+    font-family: "Roboto";
+    src: url($fontsPath + "/Roboto-Regular.woff2") format("woff2"),
+        url($fontsPath + "/Roboto-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-  font-family: 'Roboto';
-  src:
-    url($fontsPath + '/Roboto-Black.woff2') format('woff2'),
-    url($fontsPath + '/Roboto-Black.woff') format('woff');
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
+    font-family: "Roboto";
+    src: url($fontsPath + "/Roboto-Black.woff2") format("woff2"),
+        url($fontsPath + "/Roboto-Black.woff") format("woff");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-  font-family: 'Roboto';
-  src:
-    url($fontsPath + '/Roboto-Bold.woff2') format('woff2'),
-    url($fontsPath + '/Roboto-Bold.woff') format('woff');
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
+    font-family: "Roboto";
+    src: url($fontsPath + "/Roboto-Bold.woff2") format("woff2"),
+        url($fontsPath + "/Roboto-Bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
 }
 
+@font-face {
+    font-family: "Nunito";
+    src: url($fontsPath + "/Nunito-Black.woff2") format("woff2"),
+        url($fontsPath + "/Nunito-Black.woff") format("woff");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
 
-$mulish-font: 'Mulish', sans-serif;
-$nunito-font: 'Nunito', sans-serif;
+@font-face {
+    font-family: "Nunito";
+    src: url($fontsPath + "/Nunito-Bold.woff2") format("woff2"),
+        url($fontsPath + "/Nunito-Bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Nunito";
+    src: url($fontsPath + "/Nunito-BoldItalic.woff2") format("woff2"),
+        url($fontsPath + "/Nunito-BoldItalic.woff") format("woff");
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Nunito";
+    src: url($fontsPath + "/Nunito-ExtraBold.woff2") format("woff2");
+    src: url($fontsPath + "/Nunito-ExtraBold.woff") format("woff");
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Nunito";
+    src: url($fontsPath + "/Nunito-ExtraBoldItalic.woff2") format("woff2");
+    src: url($fontsPath + "/Nunito-ExtraBoldItalic.woff") format("woff");
+    font-weight: 800;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Nunito";
+    src: url($fontsPath + "/Nunito-Regular.woff2") format("woff2");
+    src: url($fontsPath + "/Nunito-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Nunito";
+    src: url($fontsPath + "/Nunito-SemiBold.woff2") format("woff2");
+    src: url($fontsPath + "/Nunito-SemiBold.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Mulish";
+    src: url($fontsPath + "/Mulish-Black.woff2") format("woff2");
+    src: url($fontsPath + "/Mulish-Black.woff") format("woff");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Mulish";
+    src: url($fontsPath + "/Mulish-ExtraBold.woff2") format("woff2");
+    src: url($fontsPath + "/Mulish-ExtraBold.woff") format("woff");
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Mulish";
+    src: url($fontsPath + "/Mulish-SemiBold.woff2") format("woff2");
+    src: url($fontsPath + "/Mulish-SemiBold.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Manrope";
+    src: url($fontsPath + "/Manrope-Bold.woff2") format("woff2");
+    src: url($fontsPath + "/Manrope-Bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Manrope";
+    src: url($fontsPath + "/Manrope-Medium.woff2") format("woff2");
+    src: url($fontsPath + "/Manrope-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Manrope";
+    src: url($fontsPath + "/Manrope-SemiBold.woff2") format("woff2");
+    src: url($fontsPath + "/Manrope-SemiBold.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+$mulish-font: "Mulish", sans-serif;
+$nunito-font: "Nunito", sans-serif;

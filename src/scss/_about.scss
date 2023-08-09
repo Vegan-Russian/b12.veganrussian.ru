@@ -1,151 +1,426 @@
-.about {
-    @include two-parts-grid;
-    color: var(--accent-text-color);
-    margin-bottom: 100px;
+.about__title {
+  font-family: "Nunito";
+  font-style: italic;
+  font-weight: 800;
+  font-size: 39px;
+  line-height: 53px;
+  text-transform: uppercase;
+  color: #0d1288;
+  margin-bottom: 46px;
+}
 
-    h2 {
-        margin-bottom: 42px;
-    }
+.about__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 0;
+  padding-bottom: 136px;
+  gap: 70px;
+}
 
-    &__points {
-        display: grid;
-        grid-template-columns: auto 1fr;
-        grid-gap: 22px 32px;
-    }
+.about__content,
+.about__count {
+  width: 50%;
+  z-index: 99;
+}
 
-    &__count-wrapper {
-        position: relative;
-        width: max-content;
-        margin-bottom: 70px;
-    }
+.about__points {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 32px 1fr;
+  grid-template-columns: auto 1fr;
+  grid-gap: 52px 32px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 106%;
+  color: #0d1288;
+}
 
-    &__count {
-        background: linear-gradient(165.95deg, #34AAFF 38.97%, #CF10FF 102.9%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        text-fill-color: transparent;
-        text-shadow: 4px 1px 18px rgba(255, 255, 255, 0.16);
-        font-weight: 900;
-        font-family: Roboto, sans-serif;
-        font-size: 236px;
-        line-height: 90.7%;
-    }
+.about__points-img-Small {
+  display: none;
+}
 
-    &__ball {
-        position: absolute;
-        top: -20px;
-        left: -12px;
-        transform: translateX(-100%);
-    }
+.about__count-info {
+  width: 100%;
+  margin-bottom: 30px;
+}
 
-    &__second-ball {
-        position: absolute;
-        top: 100%;
-        right: -10px;
-        transform: translate(100%, -20px);
-    }
+.info {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 39px;
+  line-height: 53px;
+  color: #647bff;
+}
 
-    &__wave-line {
-        position: absolute;
-        top: -56px;
-        right: 0;
-        transform: translateX(100%);
-    }
+.info:first-child {
+  margin-top: -20px;
+}
 
-    &__month-count {
-        border: 2px solid var(--accent-text-color);
-        border-radius: 29px;
-        font-size: 26px;
-        line-height: 132.7%;
-        padding: 7px 10px;
-        max-width: 416px;
-        text-align: center;
-        width: 100%;
-    }
+.info:last-child {
+  text-align: end;
+  margin-top: 10px;
+}
 
-    @include media('lg') {
-        overflow-x: hidden;
-        &__wave-line {
-            top: -56px;
-            right: -100px;
-            transform: rotate(-22deg);
-            transform-origin: 50% 50%;
-        }
-    }
+.about__count-sum {
+  text-align: center;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 215px;
+  line-height: 90%;
+  background: -o-linear-gradient(284.05deg, #34aaff 38.97%, #cf10ff 102.9%);
+  background: linear-gradient(165.95deg, #34aaff 38.97%, #cf10ff 102.9%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 4px 1px 18px rgba(255, 255, 255, 0.16);
+}
 
-    @include media('md') {
-        grid-template-columns: 1fr;
-        grid-gap: 51px;
+.about__img {
+  position: relative;
+}
 
-        h2 {
-            margin-bottom: 30px;
-        }
+.leaf61 {
+  position: absolute;
+  content: "";
+  background-image: url(../images/leaf61.png);
+  width: 100px;
+  height: 100px;
+  left: 90px;
+  bottom: 5px;
+}
 
-        &__count-info {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-    }
-    @include media('xs') {
-        font-size: 14px;
-        margin-left: -20px;
-        margin-right: -20px;
-        padding-left: 20px;
-        padding-right: 20px;
-        margin-bottom: 66px;
+.ball53 {
+  position: absolute;
+  content: "";
+  background-image: url(../images/ball53.png);
+  width: 33px;
+  height: 33px;
+  left: 290px;
+  bottom: 130px;
+}
 
-        &__count-info {
-            h2 {
-                align-self: flex-start;
-            }
-        }
+.ball51 {
+  position: absolute;
+  content: "";
+  background-image: url(../images/ball51.png);
+  width: 54px;
+  height: 55px;
+  left: 415px;
+  bottom: 35px;
+  z-index: 2;
+}
 
-        &__count-wrapper {
-            margin-bottom: 40px;
-        }
+.fl72 {
+  position: absolute;
+  content: "";
+  background-image: url(../images/fl72.png);
+  width: 117.41px;
+  height: 160px;
+  left: 405px;
+  bottom: 60px;
+  z-index: 1;
+}
 
-        &__count {
-            font-size: 151px;
-        }
+.about__application {
+  padding: 10px 35px;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+  background: #ded3fc;
+  border: 1px solid #ded3fc;
+  border-radius: 29px;
+  cursor: pointer;
+}
 
-        &__ball,
-        &__second-ball  {
-            width: 22px;
-        }
+.about__application-text {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 132.7%;
+  color: #4a2cff;
+}
 
-        &__ball {
-            left: 4px;
-        }
+@media (max-width: 1200px) {
+  .about__inner {
+    gap: 40px;
+  }
+  .about__points {
+    grid-gap: 42px 22px;
+    font-size: 28px;
+  }
+  .leaf61 {
+    left: 50px;
+    bottom: -10px;
+  }
+  .ball53 {
+    left: 250px;
+  }
+  .ball51 {
+    left: 380px;
+  }
+  .fl72 {
+    left: 400px;
+  }
 
+  .about__count {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
 
-        &__second-ball {
-            top: 110%;
-            right: 100px;
-        }
+  .about__application {
+    padding: 10px 13px;
+    margin: 0 auto;
+  }
+}
 
-        &__month-count {
-            max-width: none;
-            font-size: 20px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+@media (max-width: 1030px) {
+  .about__title {
+    font-size: 36px;
+    line-height: 50px;
+    margin-bottom: 40px;
+  }
+  .about__points {
+    grid-gap: 38px 20px;
+    font-size: 26px;
+  }
+  .about__application-text {
+    font-size: 24px;
+  }
+  .leaf61 {
+    left: 20px;
+    bottom: -10px;
+  }
+  .ball53 {
+    left: 220px;
+  }
+  .ball51 {
+    left: 345px;
+  }
+  .fl72 {
+    left: 360px;
+  }
+}
 
-        &__wave-line {
-            top: -38px;
-            right: -65px;
-            width: 86px;
-            transform: rotate(-40deg);
-        }
+@media (max-width: 940px) {
+  .info {
+    font-size: 36px;
+  }
+  .about__points {
+    font-size: 22px;
+  }
+  .about__count-sum {
+    font-size: 200px;
+  }
+  .about__application-text {
+    font-size: 22px;
+  }
 
-        &__points {
-            grid-gap: 20px 40px ;
-            img {
-                height: 30px;
-            }
-        }
-    }
+  .fl72,
+  .ball51,
+  .leaf61 {
+    display: none;
+  }
+  .fl73 {
+    position: absolute;
+    content: "";
+    background-image: url(../images/fl73.png);
+    width: 80px;
+    height: 120px;
+    left: 340px;
+    bottom: 60px;
+    z-index: 1;
+  }
+  .ball54 {
+    position: absolute;
+    content: "";
+    background-image: url(../images/ball54.png);
+    width: 40px;
+    height: 40px;
+    left: 330px;
+    bottom: 40px;
+    z-index: 2;
+  }
+  .leaf62 {
+    position: absolute;
+    content: "";
+    background-image: url(../images/leaf62.png);
+    width: 60px;
+    height: 60px;
+    left: 40px;
+    bottom: 5px;
+  }
+}
+
+@media (max-width: 854px) {
+  .leaf62 {
+    left: 30px;
+    top: -70px;
+  }
+  .ball53 {
+    left: 200px;
+  }
+  .ball54 {
+    left: 300px;
+  }
+  .fl73 {
+    left: 310px;
+  }
+  .about__application-text {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about__inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .about__content,
+  .about__count {
+    width: 100%;
+  }
+  .about__count-info {
+    margin-top: 50px;
+  }
+  .leaf62 {
+    left: 160px;
+  }
+  .ball53 {
+    left: 320px;
+  }
+  .ball54 {
+    left: 450px;
+  }
+  .fl73 {
+    left: 460px;
+  }
+}
+
+@media (max-width: 596px) {
+  .about__points-img-Big {
+    display: none;
+  }
+  .about__points-img-Small {
+    display: block;
+  }
+  .about__count-sum {
+    font-size: 165px;
+  }
+  .leaf62 {
+    left: 100px;
+  }
+  .ball53 {
+    left: 280px;
+  }
+  .ball54 {
+    left: 380px;
+  }
+  .fl73 {
+    left: 380px;
+  }
+}
+
+@media (max-width: 510px) {
+  .about__title {
+    text-align: center;
+    font-size: 34px;
+    line-height: 38px;
+    margin: 30px auto;
+  }
+  .about__points {
+    font-size: 20px;
+  }
+  .leaf62 {
+    left: 80px;
+  }
+  .ball53 {
+    left: 220px;
+    bottom: 90px;
+  }
+  .ball54 {
+    left: 330px;
+  }
+  .fl73 {
+    left: 340px;
+  }
+}
+
+@media (max-width: 440px) {
+  .about__title {
+    font-size: 28px;
+    line-height: 32px;
+    margin: 30px auto;
+  }
+  .about__count-sum {
+    text-align: left;
+  }
+  .leaf62 {
+    left: 30px;
+  }
+  .ball53 {
+    left: 160px;
+  }
+  .ball54 {
+    left: 270px;
+  }
+  .fl73 {
+    left: 280px;
+  }
+  .about__application-text {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 375px) {
+  .about__count-sum {
+    font-size: 150px;
+  }
+  .leaf62 {
+    left: 20px;
+  }
+  .ball53 {
+    left: 140px;
+  }
+  .ball54 {
+    left: 240px;
+  }
+  .fl73 {
+    left: 230px;
+    bottom: 50px;
+    -webkit-transform: rotate(-30deg);
+    -ms-transform: rotate(-30deg);
+    transform: rotate(-30deg);
+  }
+}
+
+@media (max-width: 320px) {
+  .about__title {
+    font-size: 26px;
+    line-height: 36px;
+  }
+  .leaf62 {
+    left: 20px;
+  }
+  .ball53 {
+    left: 140px;
+  }
+  .fl73 {
+    left: 210px;
+  }
 }

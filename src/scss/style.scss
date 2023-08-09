@@ -1,21 +1,15 @@
 @charset "utf-8";
-@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@600;800;900&family=Nunito:wght@600;700;800;900&display=swap');
 
 $fontsPath: "../fonts" !default;
 @import "fonts";
-@import "vars";
-@import "mixins";
+@import "reset";
 @import "common";
-@import "helpers";
 @import "header";
-@import "footer";
-@import "burger";
 @import "promo";
-@import "button";
 @import "about";
-@import "howto";
+@import "request";
 @import "details";
 @import "attention";
 @import "reviews";
-@import "menu";
 @import "products";
+@import "footer";

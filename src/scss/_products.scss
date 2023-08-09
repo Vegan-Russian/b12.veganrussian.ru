@@ -1,110 +1,658 @@
-.products {
-    --x-gap: 80px;
-    &__description {
-        margin-bottom: 51px;
+.products__container {
+    position: relative;
+    color: #ffffff;
+  }
+  
+  .products-main__inner,
+  .products-main__text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .products-main__inner {
+    gap: 30px;
+    width: 535px;
+    padding-top: 75px;
+    padding-bottom: 170px;
+  }
+  
+  @media (max-width: 1230px) {
+    .products-main__inner {
+      margin: 0 auto;
+      padding-bottom: 270px;
     }
-
-    &__table {
-        border: 2px solid #fff;
-        box-shadow: 0px 0px 10px 4px rgba(255, 255, 255, 0.31);
-        border-radius: 63px;
-        margin-bottom: 120px;
-        padding: 29px 29px 40px;
+  
+    .products-main__inner::before {
+      position: absolute;
+      content: "";
+      background-image: url(../images/products-bg__adaptive.png);
+      width: 308px;
+      height: 305.55px;
+      bottom: -35px;
+      /* right: 400px; */
+      right: calc(43px + (400 - 43) * ((100vw - 375px) / (1230 - 375)));
     }
-
-    &__head {
-        padding-left: var(--x-gap);
-        padding-top: 10px;
-        padding-bottom: 10px;
-        border-top: 2px solid #fff;
-        border-bottom: 2px solid #fff;
-        font-size: 800px;
-        font-size: 39px;
-        font-weight: 800;
-
-
-        &--first {
-            border-top: none;
-            padding-top: 0;
-            padding-bottom: 35px;
-        }
+  
+    .products-main__inner::after {
+      display: none;
     }
-
-    &__section {
-        --y-gap: 40px;
-        padding: var(--y-gap) var(--x-gap);
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 54px calc(var(--x-gap) * 2);
-        position: relative;
-
-        &::after {
-            content: '';
-            height: calc(100% - var(--y-gap) * 2);
-            position: absolute;
-            left: 50%;
-            width: 2px;
-            background-color: #fff;
-            top: var(--y-gap);
-        }
+  
+    .milk::after {
+      display: none;
     }
-
-    &__item {
-        font-size: 22px;
-        line-height: 1.318;
-        display: flex;
-        flex-direction: column;
-        strong {
-            font-weight: 900;
-            font-family: $mulish-font;
-            margin-top: 5px;
-        }
+  }
+  
+  @media (max-width: 390px) {
+    .products-main__inner {
+      padding-top: 0;
     }
-
-    &__footnote {
-        font-size: 18px;
-        line-height: 1.36;
-        margin-top: 18px;
+  }
+  
+  .products-main__inner::after {
+    position: absolute;
+    content: "";
+    background-image: url(../images/products-bg.png);
+    width: 735px;
+    height: 750px;
+    right: 0;
+    top: -50px;
+  }
+  
+  @media (max-width: 1365px) {
+    .products-main__inner::after {
+      right: -100px;
     }
-
-    @include media('md') {
-        --x-gap: 40px;
+  }
+  
+  .products-main__title {
+    position: relative;
+    font-family: "Nunito";
+    font-weight: 900;
+    font-size: 51px;
+    line-height: 58px;
+  }
+  
+  .products-main__title::before {
+    position: absolute;
+    content: none;
+    background-image: url(../images/prod-leaf-1.png);
+    bottom: 28px;
+    right: 45px;
+    height: 100px;
+    width: 100px;
+    background-repeat: no-repeat;
+  }
+  
+  .products-main__title::after {
+    position: absolute;
+    content: none;
+    background-image: url(../images/prod-leaf-2.png);
+    bottom: -80px;
+    right: 110px;
+    height: 100px;
+    width: 100px;
+    background-repeat: no-repeat;
+  }
+  
+  .products-main__text::before {
+    position: absolute;
+    content: none;
+    background-image: url(../images/prod-leaf-3.png);
+    bottom: 370px;
+    right: -25px;
+    height: 100px;
+    width: 100px;
+    background-repeat: no-repeat;
+  }
+  
+  .prod__leaf::before {
+    position: absolute;
+    content: none;
+    background-image: url(../images/product-leaf-a.png);
+    bottom: 394px;
+    left: 35px;
+    height: 70px;
+    width: 70px;
+    background-repeat: no-repeat;
+  }
+  
+  .prod__leaf::after {
+    position: absolute;
+    content: none;
+    background-image: url(../images/products-leaf-4.png);
+    top: 240px;
+    left: 35px;
+    height: 100px;
+    width: 100px;
+    background-repeat: no-repeat;
+  }
+  
+  .text__leaf {
+    position: relative;
+    z-index: 99;
+  }
+  
+  .text__leaf::before {
+    position: absolute;
+    content: none;
+    background-image: url(../images/text__leaf.png);
+    bottom: 310px;
+    left: 164px;
+    height: 70px;
+    width: 70px;
+    background-repeat: no-repeat;
+  }
+  
+  .text__leaf::after {
+    position: absolute;
+    content: none;
+    background-image: url(../images/text__leaf2.png);
+    bottom: 89px;
+    left: 115px;
+    height: 90px;
+    width: 150px;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+  
+  @media (max-width: 636px) {
+    .wrapper-prod {
+      background: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(2.65%, #5400dc),
+        color-stop(21.35%, #9e3cff),
+        color-stop(38.54%, #7017ea),
+        color-stop(63.02%, #9e3cff),
+        color-stop(86.98%, #5400dc)
+      );
+      background: -o-linear-gradient(
+        top,
+        #5400dc 2.65%,
+        #9e3cff 21.35%,
+        #7017ea 38.54%,
+        #9e3cff 63.02%,
+        #5400dc 86.98%
+      );
+      background: linear-gradient(
+        180deg,
+        #5400dc 2.65%,
+        #9e3cff 21.35%,
+        #7017ea 38.54%,
+        #9e3cff 63.02%,
+        #5400dc 86.98%
+      );
     }
-    @include media('sm') {
-        --x-gap: 0;
-
-        &__section {
-            &::after {
-                display: none;
-            }
-            grid-template-columns: 1fr;
-            grid-gap: 30px;
-        }
+    .products-main__inner {
+      width: auto;
     }
-    @include media('xs') {
-        &__title {
-            margin-bottom: 23px;
-        }
-        &__table {
-            padding-top: 24px;
-            margin-bottom: 30px;
-        }
-
-        &__section {
-            padding: 20px 0 40px;
-        }
-        &__head {
-            font-size: 27px;
-
-            &--first {
-                padding-bottom: 10px;
-            }
-        }
-        &__item {
-            font-size: 14px;
-        }
-        &__footnote {
-            font-size: 12px;
-        }
+  
+    .products-main__title {
+      font-size: 33px;
+      line-height: 42px;
     }
-}
+  
+    .products-main__title::before {
+      content: "";
+    }
+  
+    .products-main__text::before {
+      content: "";
+    }
+  
+    .products-main__title::after {
+      content: "";
+    }
+  
+    .prod__leaf::before {
+      content: "";
+    }
+  
+    .prod__leaf::after {
+      content: "";
+    }
+  
+    .text__leaf::before {
+      content: "";
+    }
+  
+    .text__leaf::after {
+      content: "";
+    }
+  
+    .products-main__text {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 26px;
+    }
+  }
+  
+  .products-main__text {
+    gap: 30px;
+    font-family: "Manrope";
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 26px;
+    z-index: 99;
+  }
+  
+  .products-main__text a {
+    color: inherit;
+  }
+  
+  .products-table {
+    margin-bottom: 175px;
+  }
+  
+  .products-table__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: start;
+    gap: 170px;
+  }
+  
+  .products__title {
+    font-family: "Nunito";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 39px;
+    line-height: 53px;
+    padding-bottom: 15px;
+    margin-bottom: 35px;
+    border-bottom: 4px solid white;
+  }
+  
+  .products__table {
+    width: 876px;
+    padding-bottom: 55px;
+    border-bottom: 4px solid white;
+  }
+  
+  .products__column-inner {
+    font-family: "Nunito";
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: start;
+    gap: 55px;
+  }
+  
+  .products__row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 150px;
+  }
+  
+  .prod {
+    width: 340px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  
+  .prod p:nth-child(2) {
+    font-family: "Mulish";
+    font-weight: 900;
+    line-height: 28px;
+  }
+  
+  .prod__desc {
+    width: 377px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+  }
+  
+  @media (max-width: 415px) {
+    .prod__desc {
+      width: 300px;
+    }
+  }
+  
+  .milk,
+  .prods,
+  .herb,
+  .alpro,
+  .diferent,
+  .leaf,
+  .easy,
+  .energy {
+    position: relative;
+  }
+  
+  .milk::after {
+    position: absolute;
+    content: "";
+    background-image: url(../images/leaf.png);
+    width: 170.09px;
+    height: 204.13px;
+    right: -164px;
+    top: -110px;
+  }
+  
+  .prods::after {
+    position: absolute;
+    content: "";
+    background-image: url(../images/prods.png);
+    width: 296.04px;
+    height: 631px;
+    right: -290px;
+    bottom: 0;
+  }
+  
+  .milk::before {
+    position: absolute;
+    content: "";
+    background-image: url(../images/de-olio.png);
+    width: 385.45px;
+    height: 385.45px;
+    right: -324px;
+    bottom: -310px;
+  }
+  
+  .herb::after {
+    position: absolute;
+    content: "";
+    background-image: url(../images/leaves_3.png);
+    width: 916.84px;
+    height: 692.89px;
+    right: -392px;
+    bottom: -270px;
+    z-index: 10;
+  }
+  
+  .herb::before {
+    position: absolute;
+    content: "";
+    background-image: url(../images/HiBalls.png);
+    width: 231px;
+    height: 322px;
+    right: -290px;
+    bottom: 0;
+    z-index: 20;
+  }
+  
+  .alpro::before {
+    position: absolute;
+    content: "";
+    background-image: url(../images/leaf2.png);
+    width: 302px;
+    height: 270.26px;
+    bottom: -39px;
+    left: -49px;
+  }
+  
+  .alpro::after {
+    position: absolute;
+    content: "";
+    background-image: url(../images/tetrapak.png);
+    width: 283px;
+    height: 631px;
+    bottom: -239px;
+    right: -400px;
+  }
+  
+  .easy::after {
+    position: absolute;
+    content: "";
+    background-image: url(../images/easy-base.png);
+    width: 390px;
+    height: 302px;
+    bottom: 100px;
+    right: -350px;
+  }
+  
+  .energy::after {
+    position: absolute;
+    content: "";
+    background-image: url(../images/energy.png);
+    width: 430.92px;
+    height: 723.29px;
+    bottom: -730px;
+    right: -350px;
+  }
+  
+  .diferent::after {
+    position: absolute;
+    content: "";
+    background-image: url(../images/plate.png);
+    width: 312.54px;
+    height: 584.57px;
+    bottom: -639px;
+    right: -350px;
+  }
+  
+  .leaf::before {
+    position: absolute;
+    content: "";
+    background-image: url(../images/leaf-add.png);
+    width: 174.09px;
+    height: 204.13px;
+    left: -165px;
+    bottom: -120px;
+  }
+  
+  @media (max-width: 1330px) {
+    .products__table {
+      width: 676px;
+    }
+  
+    .products__row {
+      gap: 70px;
+    }
+  }
+  
+  @media (max-width: 1190px) {
+    .milk::after,
+    .milk::before,
+    .prods::after,
+    .herb::after,
+    .herb::before,
+    .alpro::after,
+    .diferent::after,
+    .leaf::after,
+    .easy::after {
+      right: -272px;
+    }
+  
+    .energy::after {
+      right: -315px;
+    }
+  }
+  
+  @media (max-width: 1050px) {
+    .milk::after,
+    .milk::before,
+    .prods::after,
+    .herb::after,
+    .herb::before,
+    .alpro::after,
+    .diferent::after,
+    .leaf::after,
+    .easy::after,
+    .energy::after {
+      display: none;
+    }
+  
+    .products__table {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 725px) {
+    .products-table__inner {
+      gap: 70px;
+    }
+  }
+  
+  @media (max-width: 677px) {
+    .products__row {
+      gap: 30px;
+    }
+  }
+  
+  @media (max-width: 586px) {
+    .products__row {
+      font-size: 20px;
+      line-height: 27px;
+    }
+  }
+  
+  .products__mobile {
+    color: white;
+    display: none;
+    margin-bottom: 110px;
+  }
+  
+  @media (max-width: 390px) {
+    .products-table {
+      display: none;
+    }
+  
+    .products__mobile {
+      display: block;
+    }
+  }
+  
+  .products__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  
+  .products__link {
+    background-color: transparent;
+    background-image: url(../images/str.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+    width: 100%;
+    border: none;
+    margin: 0;
+    padding: 15px 10px 10px 10px;
+    font-family: "Nunito";
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 37px;
+    color: white;
+    border-bottom: 2px solid white;
+    cursor: pointer;
+  }
+  
+  .products__sub-item {
+    margin-top: 20px;
+  }
+  
+  .products__item-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
+  
+  .products__sub {
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+    border-bottom: 2px solid white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .products__sub-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    gap: 25px;
+  }
+  
+  .products__sub-name {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+  }
+  
+  .products__sub-desc {
+    font-size: 18px;
+  }
+  
+  .products__sub-value {
+    font-weight: 900;
+  }
+  
+  .hidden {
+    display: none !important;
+  }
+  
+  @media (max-width: 390px) {
+    .header__inner {
+      padding-top: 10px;
+      margin-bottom: 0;
+    }
+  
+    .header__main {
+      padding-top: 35px;
+    }
+  
+    .header__logo img {
+      height: 41px;
+      width: 41px;
+    }
+  
+    .header__menu,
+    .header__menu-img img {
+      width: 44px;
+      height: 32px;
+    }
+  
+    .header__menu-img {
+      width: 45px;
+    }
+  
+    .products-main {
+      margin-top: 50px;
+    }
+  
+    .products-main__inner::before {
+      bottom: 0;
+    }
+  }

@@ -1,28 +1,102 @@
-.header {
-    padding-top: 37px;
-    padding-bottom: 32px;
+.header__inner {
+    padding-top: 55px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
-
-    &__link {
-        outline: none;
-        transition: box-shadow .3s ease;
-        border-radius: 50%;
-        &:focus-visible,
-        &:hover {
-            box-shadow: 2px 2px 34px rgba(255, 255, 255, 0.55);
-
-        }
-    }
-
-    @include media('xs') {
-        padding-top: 31px;
-        padding-bottom: 33px;
-        &__link {
-            img {
-                max-width: 41px;
-            }
-        }
-    }
-}
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-bottom: 70px;
+  }
+  
+  .header__logo {
+    padding: 10px 35px 10px 0;
+    -ms-flex-item-align: self-start;
+    -ms-grid-row-align: self-start;
+    align-self: self-start;
+  }
+  
+  .header__menu,
+  .header__menu-img {
+    cursor: pointer;
+    -ms-flex-item-align: self-start;
+    -ms-grid-row-align: self-start;
+    align-self: self-start;
+  }
+  
+  .header__menu-img {
+    width: 75px;
+    height: 75px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  
+  .header__mobile {
+    position: absolute;
+    height: auto;
+    width: 325px;
+    top: 150px;
+    right: 0;
+    z-index: 99;
+    padding: 50px;
+    background-color: white;
+    background-image: url(../images/menu-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom bottom;
+    border-radius: 15px;
+    -webkit-box-shadow: 2px 2px 62px rgba(255, 255, 255, 0.15);
+    box-shadow: 2px 2px 62px rgba(255, 255, 255, 0.15);
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-transform: translateX(500%);
+    -ms-transform: translateX(500%);
+    transform: translateX(500%);
+  }
+  
+  .header__mobile.action {
+    /* top: 0; */
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+  
+  .header__mobile-menu {
+    position: relative;
+  }
+  
+  .menu__close {
+    position: absolute;
+    right: -5px;
+    top: 31px;
+    width: 50px;
+    cursor: pointer;
+  }
+  
+  .header__mobile-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 45px;
+  }
+  
+  .header__mobile-link {
+    font-family: "Nunito";
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #0d1288;
+  }

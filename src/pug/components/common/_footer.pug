@@ -1,8 +1,25 @@
 footer.footer
-  .footer__logo
-    a(href="https://veganrussian.ru/"): img(src="./images/vr-logo.svg", alt="Логотип Веганрашн")
-  ul.footer__team
-    li.footer__link: a(href="https://t.me/lefhl" target="_blank" rel="noopener noreferrer nofollow") Разработка Эдик Гизбрехт
-    li.footer__link Дизайн Дарья Журина
-    li.footer__link Редактура Дарья Ларина
-  .footer__year © 2021-2022
+  .container
+    .footer__inner
+      a.footer__logo(href='#header')
+        img(src='./images/footer-logo.svg' alt='vegan__logo')
+      .footer__main
+        .footer__column
+          p
+            | Авторка идеи, фандрайзерка, менеджерка продукта 
+            span Марина Ястремская
+          p
+            | Разработка 
+            span
+              | Эдик Гизбрехт; Марина Мороз;
+              br
+              | Юлия Богданова
+        .footer__column
+          p
+            | Дизайн 
+            span Дарья Журина; Маргарита Хайбрахманова
+          p
+            | Редактура 
+            span Дарья Ларина
+      .footer__copy
+        p &copy; 2021-2022
