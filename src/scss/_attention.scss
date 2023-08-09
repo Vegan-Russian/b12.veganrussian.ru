@@ -121,12 +121,16 @@
   }
   
   @media (max-width: 390px) {
+    .container__attention {
+      padding: 0;
+    }
+
     .attention {
       margin-bottom: 0;
     }
   
     .attention__info {
-      padding: 30px 13px 75px 13px;
+      padding: 30px 27px 75px 27px;
       background-image: url(../images/frame-bg.png);
       background-repeat: no-repeat;
       background-size: cover;
