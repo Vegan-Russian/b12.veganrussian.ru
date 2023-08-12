@@ -44,7 +44,7 @@
     width: 325px;
     top: 150px;
     right: 0;
-    z-index: 99;
+    z-index: 999;
     padding: 50px;
     background-color: white;
     background-image: url(../images/menu-bg.png);
@@ -63,7 +63,6 @@
   }
   
   .header__mobile.action {
-    /* top: 0; */
     -webkit-transform: translateX(0);
     -ms-transform: translateX(0);
     transform: translateX(0);
