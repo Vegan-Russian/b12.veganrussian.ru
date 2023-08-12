@@ -15,7 +15,7 @@
   display: flex;
   padding-top: 0;
   padding-bottom: 136px;
-  gap: 122px;
+  gap: 75px;
 }
 
 .about__content,
@@ -46,11 +46,13 @@
 }
 
 .about__count-info {
+  padding-left: 107px;
   width: 100%;
   margin-bottom: 30px;
 }
 
 .info {
+  margin-right: 50px;
   font-family: "Nunito";
   font-style: normal;
   font-weight: 800;
@@ -92,7 +94,7 @@
   background-image: url(../images/leaf61.png);
   width: 100px;
   height: 100px;
-  left: 90px;
+  left: -23px;
   bottom: 5px;
 }
 
@@ -102,7 +104,7 @@
   background-image: url(../images/ball53.png);
   width: 33px;
   height: 33px;
-  left: 290px;
+  left: 218px;
   bottom: 130px;
 }
 
@@ -112,7 +114,7 @@
   background-image: url(../images/ball51.png);
   width: 54px;
   height: 55px;
-  left: 415px;
+  left: 345px;
   bottom: 35px;
   z-index: 2;
 }
@@ -123,12 +125,13 @@
   background-image: url(../images/fl72.png);
   width: 117.41px;
   height: 160px;
-  left: 405px;
+  left: 340px;
   bottom: 60px;
   z-index: 1;
 }
 
 .about__application {
+  margin-left: 107px;
   padding: 10px 35px;
   -ms-flex-item-align: center;
   -ms-grid-row-align: center;
