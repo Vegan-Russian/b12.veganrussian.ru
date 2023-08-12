@@ -151,6 +151,20 @@
   color: #4a2cff;
 }
 
+@media (max-width: 1361px) {
+  .about__count-info {
+    padding-left: 0;
+  }
+
+  // .info {
+  //   margin-right: 0;
+  // }
+
+  .about__application {
+    margin-left: 0;
+  }
+}
+
 @media (max-width: 1200px) {
   .about__inner {
     gap: 40px;
