@@ -249,7 +249,6 @@
 @media (max-width: 1175px) {
     .slick-track {
         gap: 3px;
-        height: calc(409px - (280 - 409) * ((100vw - 375px) / (1175 - 375)));
     }
 
     .big {
