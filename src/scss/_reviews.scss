@@ -316,7 +316,9 @@
 
 @media (max-width: 1174px) {
     .slick-dots {
-        right: calc(107px + (350 - 107) * ((100vw - 375px) / (1174 - 375)));
+      width: auto;
+        right: 35%;
+        left: 35%;
     }
     .swiper-wrapper {
         padding: 0;
