@@ -1,8 +1,8 @@
 .reviews {
     margin-bottom: 190px;
-  }
-  
-  .reviews__inner {
+}
+
+.reviews__inner {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -11,9 +11,9 @@
     -ms-flex-direction: column;
     flex-direction: column;
     position: relative;
-  }
-  
-  .reviews__inner::after {
+}
+
+.reviews__inner::after {
     position: absolute;
     content: "";
     background-image: url(../images/leaf-reviews.png);
@@ -21,9 +21,9 @@
     height: 204px;
     bottom: -200px;
     left: -70px;
-  }
-  
-  .reviews__title {
+}
+
+.reviews__title {
     margin-bottom: 70px;
     font-family: "Nunito";
     font-style: italic;
@@ -32,28 +32,28 @@
     line-height: 53px;
     text-transform: uppercase;
     color: #ffffff;
-  }
-  
-  .swiper-wrapper {
+}
+
+.swiper-wrapper {
     margin: 0 85px;
-  }
-  
-  .slick-track {
+}
+
+.slick-track {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     gap: 90px;
-  }
-  
-  .slick-list {
+}
+
+.slick-list {
     overflow: hidden;
-  }
-  
-  .slick-dots {
+}
+
+.slick-dots {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
-    padding: 3px 10px;
+    padding: 3px 13px;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
@@ -65,28 +65,29 @@
     bottom: -65px;
     right: 10%;
     position: absolute;
-  }
-  
-  .slick-dots li {
+}
+
+.slick-dots li {
     list-style: none;
-  }
-  
-  .slick-dots button {
+}
+
+.slick-dots button {
     background-color: white;
     border-color: transparent;
     font-family: Manrope;
     font-size: 18px;
     font-weight: 700;
     line-height: 24px;
-  }
-  
-  .slick-active button {
+    border-radius: 38px;
+}
+
+.slick-active button {
     background-image: url(../images/bg-active.png);
     background-repeat: no-repeat;
     background-position: center;
-  }
-  
-  .reviews__text {
+}
+
+.reviews__text {
     width: 454px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -101,83 +102,83 @@
     height: auto;
     background: #ffffff;
     font-size: 22px;
-  }
-  
-  @media (max-width: 1435px) {
+}
+
+@media (max-width: 1435px) {
     .reviews__text {
-      width: 400px;
+        width: 400px;
     }
-  }
-  
-  @media (max-width: 1220px) {
+}
+
+@media (max-width: 1220px) {
     .reviews__text {
-      font-weight: 700;
-      font-size: 18px;
-      line-height: 24px;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 24px;
     }
-  }
-  
-  .big {
+}
+
+.big {
     width: 1000px;
-  }
-  
-  .reviews__text-b {
+}
+
+.reviews__text-b {
     margin: 0 auto;
     width: 850px;
     padding-right: 35px;
     padding-left: 35px;
-  }
-  
-  @media (max-width: 1384px) {
+}
+
+@media (max-width: 1384px) {
     .slick-track {
-      gap: 62px;
+        gap: 62px;
     }
-  
+
     @media (max-width: 1263px) {
-      .swiper-wrapper {
-        margin: 0 45px;
-      }
+        .swiper-wrapper {
+            margin: 0 45px;
+        }
     }
-  
+
     @media (max-width: 1160px) {
-      .swiper-wrapper {
-        padding: 0 15px;
-      }
-      .slick-track {
-        gap: 34px;
-      }
+        .swiper-wrapper {
+            padding: 0 15px;
+        }
+        .slick-track {
+            gap: 34px;
+        }
     }
-  
+
     .reviews__text {
-      height: 420px;
+        height: 420px;
     }
-  
+
     .big {
-      width: 860px;
+        width: 860px;
     }
-  
+
     .reviews__text-b {
-      width: 801px;
+        width: 801px;
     }
-  }
-  
-  .reviews__text-b .reviews__author {
+}
+
+.reviews__text-b .reviews__author {
     padding-bottom: 30px;
-  }
-  
-  .reviews__text p {
+}
+
+.reviews__text p {
     padding: 35px 18px 0 35px;
-  }
-  
-  .reviews__author p {
+}
+
+.reviews__author p {
     font-family: "Nunito";
     font-weight: 800;
     font-size: 25px;
     line-height: 33px;
     color: #0d1288;
-  }
-  
-  .reviews__author {
+}
+
+.reviews__author {
     padding-right: 50px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -186,27 +187,27 @@
     -ms-flex-pack: end;
     justify-content: flex-end;
     position: relative;
-  }
-  
-  .reviews__btn {
+}
+
+.reviews__btn {
     position: absolute;
     cursor: pointer;
     bottom: 30%;
-  }
-  
-  .reviews__nav {
+}
+
+.reviews__nav {
     display: none;
-  }
-  
-  .swiper-button-left {
+}
+
+.swiper-button-left {
     left: 0;
-  }
-  
-  .swiper-button-right {
+}
+
+.swiper-button-right {
     right: 0;
-  }
-  
-  .author:after {
+}
+
+.author:after {
     position: absolute;
     content: "";
     background-image: url(../images/reviews-leaf.svg);
@@ -214,13 +215,13 @@
     height: 204.13px;
     bottom: -92px;
     right: 50px;
-  }
-  
-  .reviews__text-b .author:after {
+}
+
+.reviews__text-b .author:after {
     bottom: -58px;
-  }
-  
-  .author__two:after {
+}
+
+.author__two:after {
     position: absolute;
     content: "";
     background-image: url(../images/author_two.png);
@@ -228,124 +229,124 @@
     height: 204.13px;
     top: -312px;
     right: -35px;
-  }
-  
-  .author__two p {
+}
+
+.author__two p {
     padding-top: 10px;
     padding-bottom: 30px;
-  }
-  
-  .swiper-pagination {
+}
+
+.swiper-pagination {
     display: none;
-  }
-  
-  @media (max-width: 1384px) {
+}
+
+@media (max-width: 1384px) {
     .reviews__text {
-      gap: 0;
+        gap: 0;
     }
-  }
-  
-  @media (max-width: 1175px) {
+}
+
+@media (max-width: 1175px) {
     .slick-track {
-      gap: 3px;
-      height: calc(409px - (280 - 409) * ((100vw - 375px) / (1175 - 375)));
+        gap: 3px;
+        height: calc(409px - (280 - 409) * ((100vw - 375px) / (1175 - 375)));
     }
-  
+
     .big {
-      width: auto;
-      height: auto;
+        width: auto;
+        height: auto;
     }
-  
+
     .swiper-button-right {
-      display: none;
+        display: none;
     }
-  
+
     .swiper-button-left {
-      display: none;
+        display: none;
     }
-  
+
     .reviews__nav {
-      display: block;
-      bottom: -100px;
-      position: absolute;
+        display: block;
+        bottom: -100px;
+        position: absolute;
     }
-  
+
     .mob-arr__left {
-      left: 10%;
+        left: 10%;
     }
-  
+
     .mob-arr__right {
-      right: 10%;
+        right: 10%;
     }
-  
+
     .reviews__inner:after {
-      display: none;
+        display: none;
     }
-  
+
     .mob-arr__left {
-      left: 0;
+        left: 0;
     }
-  
+
     .mob-arr__right {
-      right: 0;
+        right: 0;
     }
-  
+
     .slick-dots {
-      bottom: -93px;
-      right: 40%;
+        bottom: -93px;
+        right: 40%;
     }
-  
+
     .reviews__text {
-      border-radius: 25px 25px 25px 0;
-      height: auto;
+        border-radius: 25px 25px 25px 0;
+        height: auto;
     }
-  
+
     .reviews__text p {
-      padding: 33px 13px 0 33px;
+        padding: 33px 13px 0 33px;
     }
-  
+
     .reviews__text:nth-child(1) {
-      width: 100%;
+        width: 100%;
     }
-  
+
     .reviews__author p {
-      padding-bottom: 23px;
+        padding-bottom: 23px;
     }
-  }
-  
-  @media (max-width: 1174px) {
+}
+
+@media (max-width: 1174px) {
     .slick-dots {
-      right: calc(107px + (350 - 107) * ((100vw - 375px) / (1174 - 375)));
+        right: calc(107px + (350 - 107) * ((100vw - 375px) / (1174 - 375)));
     }
     .swiper-wrapper {
-      padding: 0;
-      margin: 0;
+        padding: 0;
+        margin: 0;
     }
-  
+
     .reviews__text-b {
-      padding: 0;
-      font-size: 14px;
-      line-height: 20px;
+        padding: 0;
+        font-size: 14px;
+        line-height: 20px;
     }
-  }
-  
-  @media (max-width: 506px) {
+}
+
+@media (max-width: 506px) {
     .container__inner {
-      padding: 0;
+        padding: 0;
     }
-  
+
     .reviews__title {
-      margin-bottom: 15px;
-      text-align: center;
+        margin-bottom: 15px;
+        text-align: center;
     }
     .reviews__author:after {
-      width: 209px;
-      height: 178.75px;
-      bottom: -30px;
+        width: 209px;
+        height: 178.75px;
+        bottom: -30px;
     }
-  
+
     .b__author p {
-      padding-top: 15px;
-      padding-bottom: 0;
+        padding-top: 15px;
+        padding-bottom: 0;
     }
-  }
+}
