@@ -18,7 +18,7 @@
   
   .products-main__inner {
     gap: 30px;
-    width: 535px;
+    width: 548px;
     padding-top: 75px;
     padding-bottom: 170px;
   }
@@ -36,7 +36,6 @@
       width: 308px;
       height: 305.55px;
       bottom: -35px;
-      /* right: 400px; */
       right: calc(43px + (400 - 43) * ((100vw - 375px) / (1230 - 375)));
     }
   
@@ -48,10 +47,17 @@
       display: none;
     }
   }
+
+  @media (max-width: 636px) {
+    .products-main__inner {
+      width: auto;
+    }
+  }
   
   @media (max-width: 390px) {
     .products-main__inner {
       padding-top: 0;
+      width: 340px;
     }
   }
   
@@ -190,9 +196,6 @@
         #9e3cff 63.02%,
         #5400dc 86.98%
       );
-    }
-    .products-main__inner {
-      width: auto;
     }
   
     .products-main__title {
