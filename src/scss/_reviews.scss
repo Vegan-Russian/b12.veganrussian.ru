@@ -340,6 +340,9 @@
         margin-bottom: 15px;
         text-align: center;
     }
+    .slick-track {
+      height: calc(409px + (351px - 409px) * ((100wv - 375px) / (506 - 375)));
+    }
     .reviews__author:after {
         width: 209px;
         height: 178.75px;
